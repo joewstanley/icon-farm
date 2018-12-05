@@ -1,0 +1,17 @@
+@mixin size ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin box-size ($margin: 0, $padding: 0) {
+  box-sizing: border-box;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin abs-center ($position: absolute) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

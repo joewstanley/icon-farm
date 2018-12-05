@@ -1,0 +1,27 @@
+$desktop-large-item-border-width: 6px;
+$desktop-large-item-radius: 24px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'item-border-width': ratioize($desktop-large-width, $desktop-large-item-border-width),
+    'item-radius': ratioize($desktop-large-width, $desktop-large-item-radius)
+  ));
+}
+
+li {
+  @include box-size();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--item-border-width) solid $secondary-color;
+  border-radius: var(--item-radius);
+  cursor: pointer;
+
+  &:hover {
+    --icon-color: #{$secondary-color};
+  }
+
+  &[data-hidden] {
+    display: none;
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "title": "Icon Farm",
+  "author": "Joe Stanley",
+  "description": "This collection of icons was created without the use of image editing software, instead utilizing the SVG path element, a calculator, and simple geometry. While this is often a painstaking process, I enjoy the simplicity of the markup and the icons it generates.",
+  "svg": {
+    "width": 64,
+    "height": 64
+  },
+  "png": {
+    "width": 256,
+    "height": 256
+  },
+  "attributes": {
+    "fill": "none",
+    "stroke": "#373e48",
+    "strokeWidth": 4,
+    "strokeLinejoin": "round",
+    "strokeLinecap": "round"
+  },
+  "svgPath": "docs/img/svg",
+  "pngPath": "docs/img/png",
+  "icons": [
+    {
+      "name": "Add",
+      "path": "M32 13v38M13 32h38",
+      "filename": "add-plus",
+      "alt": "Plus"
+    },
+    {
+      "name": "Add Video",
+      "path": "M32 54A22 22 0 1 1 54 32M28 40V24l12 8zM47 54V40M40 47h14",
+      "filename": "add-video"
+    },
+    {
+      "name": "Barn",
+      "path": "M32 14l12.679492 7.320508l7.320508 12.679492v22h-13v-14h-14v14h-13v-22l7.320508 -12.679492zM7 33l9.150635 -15.849365l15.849365 -9.150635l15.849365 9.150635l9.150635 15.849365M27 29a5 5 0 1 0 10 0a5 5 0 1 0 -10 0zM25 56l14 -14m-14 0l14 14",
+      "filename": "barn"
+    },
+    {
+      "name": "Browse",
+      "path": "M8 19V13h20v6h28v32H8V29h38",
+      "filename": "browse-folder",
+      "alt": "Folder"
+    },
+    {
+      "name": "Burger",
+      "path": "M16 22c0 -16 32 -16 32 0zm0 7q4 3 8 0t8 0t8 0t8 0m0 7v4H16v-4h12l10 4l6 -4zm0 10v4q0 4 -4 4H20q-4 0 -4 -4v-4z",
+      "filename": "burger"
+    },
+    {
+      "name": "Calculator",
+      "path": "M14 6v52h36V6zm7 7h22v8H21zm0 15h3v3h-3zm9.5 0h3v3h-3zm9.5 0h3v3h-3zm0 10h3V51h-3zm-9.5 0h3v3h-3zm-9.5 0h3v3h-3zm0 10h3v3h-3zm9.5 0h3v3h-3z",
+      "filename": "calculator"
+    },
+    {
+      "name": "Camera",
+      "path": "M38 14q4 0 4 8h6q6 0 6 6v16q0 6 -6 6H16q-6 0 -6 -6V28q0 -6 6 -6h6q0 -8 4 -8zM25 35a7 7 0 1 0 14 0a7 7 0 1 0 -14 0zM46 29a1 1 0 1 0 2 0a1 1 0 1 0 -2 0z",
+      "filename": "camera"
+    },
+    {
+      "name": "Checkbox",
+      "path": "M18 34.4l8 9.6 20 -24M50 8q6 0 6 6V50q0 6 -6 6H14q-6 0 -6 -6V14q0 -6 6 -6z",
+      "filename": "checkbox-checked",
+      "alt": "Checked"
+    },
+    {
+      "name": "Checkbox",
+      "path": "M20 20l24 24m-24 0L44 20M50 8q6 0 6 6V50q0 6 -6 6H14q-6 0 -6 -6V14q0 -6 6 -6z",
+      "filename": "checkbox-crossed",
+      "alt": "Crossed"
+    },
+    {
+      "name": "Checkmark",
+      "path": "M14.5 35l10 12 25 -30",
+      "filename": "checkmark"
+    },
+    {
+      "name": "Close",
+      "path": "M14 14L50 50M14 50L50 14",
+      "filename": "close-multiply",
+      "alt": "Multiply"
+    },
+    {
+      "name": "Connect",
+      "path": "M9.372583 25.372583a32 32 0 0 1 45.254834 0M15.029437 31.029437a24 24 0 0 1 33.941125 0M20.6862915 36.6862915a16 16 0 0 1 22.627417 0M26.343146 42.343146a8 8 0 0 1 11.313708 0L32 48z",
+      "filename": "connect"
+    },
+    {
+      "name": "Delete",
+      "path": "M19 21v26c0 10 26 10 26 0V21M28 24v22m8 0V24M16 15h32m-21 0v-4c0 -4 10 -4 10 0v4",
+      "filename": "delete-trash",
+      "alt": "Trash"
+    },
+    {
+      "name": "Deny",
+      "path": "M10 32a22 22 0 1 0 44 0A22 22 0 1 0 10 32zM47.556349 16.443651L16.443651 47.556349",
+      "filename": "deny"
+    },
+    {
+      "name": "Disconnect",
+      "path": "M9.372583 25.372583a32 32 0 0 1 45.254834 0M15.029437 31.029437a24 24 0 0 1 33.941125 0M20.6862915 36.6862915a16 16 0 0 1 22.627417 0M26.343146 42.343146a8 8 0 0 1 11.313708 0L32 48zM16 48L54.627417 16",
+      "filename": "disconnect"
+    },
+    {
+      "name": "Download",
+      "path": "M12 42v8h40v-8m-30 -10l10 10l10 -10m-10 10V14",
+      "filename": "download"
+    },
+    {
+      "name": "Edit",
+      "path": "M10 54l3.751289 -14l31.112698 -31.112698q10.248711 0 10.248711 10.248711l-31.112698 31.112698zm3.751289 -14l10.248711 10.248711m-5.1243555 -5.1243555l26.162951 -26.162951m-5.1243555 -5.1243555l10.248711 10.248711",
+      "filename": "edit-pencil",
+      "alt": "Pencil"
+    },
+    {
+      "name": "External Link",
+      "path": "M54 32v14q0 8 -8 8H18q-8 0 -8 -8V18q0 -8 8 -8h14m0 22L54 10m-10 0h10v10",
+      "filename": "external-link"
+    },
+    {
+      "name": "File",
+      "path": "M14 8h36v48H14zm10 14H40m0 10H24m0 10H40",
+      "filename": "file"
+    },
+    {
+      "name": "Fullscreen",
+      "path": "M18 15H10v8m0 18v8h8m28 0h8V41M46 15h8v8",
+      "filename": "fullscreen"
+    },
+    {
+      "name": "History",
+      "path": "M10 32a22 22 0 0 1 44 0A22 22 0 0 1 10 32zM30 32a2 2 0 0 1 4 0a2 2 0 0 1 -4 0zM32 18v14h14",
+      "filename": "history-clock",
+      "alt": "Clock"
+    },
+    {
+      "name": "Home",
+      "path": "M32 8l22 16v32H38V36H26v20H10V22z",
+      "filename": "home"
+    },
+    {
+      "name": "Link",
+      "path": "M12 40.6862915A8 8 0 1 0 23.3137085 52l11.3137085 -11.3137085a8 8 0 0 0 0 -11.3137085M12 40.6862915l9.192388 -9.192388M40.6862915 12A8 8 0 0 1 52 23.3137085l-9.192388 9.192388M40.6862915 12l-11.3137085 11.3137085a8 8 0 0 0 0 11.3137085",
+      "filename": "link"
+    },
+    {
+      "name": "Menu",
+      "path": "M11 14h42m0 18H11m0 18h42",
+      "filename": "menu-list",
+      "alt": "List"
+    },
+    {
+      "name": "Pause",
+      "path": "M23 16v32m18 0V16",
+      "filename": "pause"
+    },
+    {
+      "name": "Picture",
+      "path": "M53 14q4 0 4 4v28q0 4 -4 4H11q-4 0 -4 -4V18q0 -4 4 -4zM7 44l14 -12l7 6l14 -12l14 12M15 23a3 3 0 1 0 6 0a3 3 0 1 0 -6 0z",
+      "filename": "picture"
+    },
+    {
+      "name": "Play",
+      "path": "M17 48V16l30 16z",
+      "filename": "play"
+    },
+    {
+      "name": "Save",
+      "path": "M42 12l10 10v24q0 6 -6 6H18q-6 0 -6 -6V18q0 -6 6 -6zm-3 0v15H19V12m13 5.5v4h1v-4zM19 35h26v17H19z",
+      "filename": "save"
+    },
+    {
+      "name": "Search",
+      "path": "M26 12a14 14 0 1 0 0 28a14 14 0 1 0 0 -28zM36 40l4 -4m-2 6l4 -4m0 4L52 52",
+      "filename": "search"
+    },
+    {
+      "name": "Skip Ahead",
+      "path": "M9 48V16L25 24.533333V39.466667zm16 0V16l30 16z",
+      "filename": "skip-ahead"
+    },
+    {
+      "name": "Skip Back",
+      "path": "M9 32l30 16V16zM39 24.533333V39.466667L55 48V16z",
+      "filename": "skip-back"
+    },
+    {
+      "name": "Subtitles",
+      "path": "M28 24a10 12 0 1 0 0 16M52 24a10 12 0 1 0 0 16",
+      "filename": "subtitles"
+    },
+    {
+      "name": "Unlink",
+      "path": "M12 40.6862915A8 8 0 1 0 23.3137085 52l9.192388 -9.192388M12 40.6862915l9.192388 -9.192388M40.6862915 12A8 8 0 0 1 52 23.3137085l-9.192388 9.192388M40.6862915 12l-9.192388 9.192388M16.443651 16.443651l4.242641 4.242641M26.343146 12.343146v6M12.343146 26.343146h6M43.3137085 43.3137085l4.242641 4.242641M45.656854 37.656854h6M37.656854 45.656854v6",
+      "filename": "unlink"
+    },
+    {
+      "name": "Upload",
+      "path": "M12 42v8h40v-8m-20 0V14l10 10m-20 0L32 14",
+      "filename": "upload"
+    },
+    {
+      "name": "User",
+      "path": "M32 10a11 11 0 1 0 0 22a11 11 0 1 0 0 -22zM11 54V48c0 -12 42 -12 42 0v6z",
+      "filename": "user-person",
+      "alt": "Person"
+    },
+    {
+      "name": "Volume",
+      "path": "M20 25v14H10V25zv14l18 10V15zm25 0q4 7 0 14M50 19q9 13 0 26",
+      "filename": "volume"
+    },
+    {
+      "name": "Copy",
+      "path": "M23 13H14v44h36V13H41M23 13q0 -2 2 -2h3a4 4 0 0 1 8 0h3q2 0 2 2v4q0 2 -2 2H25q-2 0 -2 -2zm0 15h18m0 9H23m0 9h18",
+      "filename": "copy-clipboard",
+      "alt": "Clipboard"
+    }
+  ],
+  "svgo": {
+    "floatPrecision": 2,
+    "plugins": [
+      {
+        "cleanupAttrs": true
+      },
+      {
+        "removeDoctype": true
+      },
+      {
+        "removeXMLProcInst": true
+      },
+      {
+        "removeComments": true
+      },
+      {
+        "removeMetadata": true
+      },
+      {
+        "removeTitle": true
+      },
+      {
+        "removeDesc": true
+      },
+      {
+        "removeUselessDefs": true
+      },
+      {
+        "removeEditorsNSData": true
+      },
+      {
+        "removeEmptyAttrs": true
+      },
+      {
+        "removeHiddenElems": true
+      },
+      {
+        "removeEmptyText": true
+      },
+      {
+        "removeEmptyContainers": true
+      },
+      {
+        "removeViewBox": false
+      },
+      {
+        "cleanupEnableBackground": true
+      },
+      {
+        "convertStyleToAttrs": true
+      },
+      {
+        "convertColors": true
+      },
+      {
+        "convertPathData": true
+      },
+      {
+        "convertTransform": true
+      },
+      {
+        "removeUnknownsAndDefaults": true
+      },
+      {
+        "removeNonInheritableGroupAttrs": true
+      },
+      {
+        "removeUselessStrokeAndFill": true
+      },
+      {
+        "cleanupIDs": true
+      },
+      {
+        "cleanupNumericValues": true
+      },
+      {
+        "cleanupListOfValues": true
+      },
+      {
+        "collapseGroups": true
+      },
+      {
+        "mergePaths": true
+      },
+      {
+        "convertShapeToPath": true
+      }
+    ]
+  }
+}

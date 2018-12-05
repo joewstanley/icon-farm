@@ -1,0 +1,22 @@
+$desktop-large-icon-size: 140px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'icon-size': ratioize($desktop-large-width, $desktop-large-icon-size),
+    'icon-color': $primary-color
+  ));
+}
+
+svg.icon {
+  @include size(var(--icon-size));
+
+  path {
+    fill: none;
+    stroke: var(--icon-color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    will-change: stroke;
+    transition: stroke 0.4s;
+  }
+}

@@ -1,0 +1,31 @@
+$desktop-large-download-height: 36px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'download-height': ratioize($desktop-large-width, $desktop-large-download-height)
+  ));
+}
+
+#download {
+  --icon-color: #{$primary-color};
+
+  a {
+    @include size(auto, var(--download-height));
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    will-change: color;
+    transition: color 0.4s;
+
+    svg {
+      @include size(var(--download-height));
+      margin-right: 1em;
+    }
+
+    &:hover {
+      color: $secondary-color;
+      --icon-color: #{$secondary-color};
+    }
+  }
+}

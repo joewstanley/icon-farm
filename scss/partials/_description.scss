@@ -1,0 +1,11 @@
+$desktop-large-description-width: 1200px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'description-width': ratioize($desktop-large-width, $desktop-large-description-width)
+  ));
+}
+
+#description {
+  width: var(--description-width);
+}

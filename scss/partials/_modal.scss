@@ -1,0 +1,115 @@
+$desktop-large-modal-width: 920px;
+$desktop-large-modal-height: 380px;
+$desktop-large-modal-padding-column: 50px;
+$desktop-large-modal-padding-row: 40px;
+$desktop-large-modal-radius: 12px;
+$desktop-large-modal-close-size: 56px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'modal-width': ratioize($desktop-large-width, $desktop-large-modal-width),
+    'modal-height': ratioize($desktop-large-width, $desktop-large-modal-height),
+    'modal-padding-column': ratioize($desktop-large-width, $desktop-large-modal-padding-column),
+    'modal-padding-row': ratioize($desktop-large-width, $desktop-large-modal-padding-row),
+    'modal-radius': ratioize($desktop-large-width, $desktop-large-modal-radius),
+    'modal-close-size': ratioize($desktop-large-width, $desktop-large-modal-close-size)
+  ));
+}
+
+[data-modal] {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: $modal-color;
+  }
+}
+
+#modal {
+  @include size(var(--modal-width), var(--modal-height));
+  @include abs-center(fixed);
+  display: grid;
+  grid-template-areas: "head code"
+                       "down code";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 70% 30%;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  padding: var(--modal-padding-column) var(--modal-padding-row);
+  border-radius: var(--modal-radius);
+  background-color: white;
+  box-shadow: $box-shadow;
+  box-sizing: border-box;
+
+  #modal-close {
+    @include size(var(--modal-close-size));
+    @include box-size();
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35%, -35%);
+    border: none;
+    outline: none;
+    background-color: $primary-color;
+    border-radius: calc(var(--modal-close-size) / 2);
+    cursor: pointer;
+    --icon-color: white;
+
+    svg {
+      @include size(80%);
+      @include abs-center();
+    }
+
+    &:hover {
+      --icon-color: #{$secondary-color};
+    }
+  }
+
+  header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    grid-area: head;
+
+    #preview {
+      display: inline-block;
+    }
+  }
+
+  #download {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: down;
+  }
+
+  #code {
+    grid-area: code;
+  }
+
+  #clipboard {
+    @include size(0);
+    display: block;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    box-shadow: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+}

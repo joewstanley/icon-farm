@@ -1,0 +1,25 @@
+$desktop-large-list-margin: 40px;
+$desktop-large-list-columns: 6;
+$desktop-large-list-column-width: 160px;
+$desktop-large-list-row-height: $desktop-large-list-column-width;
+$desktop-large-list-row-gap: 60px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'list-margin': ratioize($desktop-large-width, $desktop-large-list-margin),
+    'list-columns': $desktop-large-list-columns,
+    'list-column-width': ratioize($desktop-large-width, $desktop-large-list-column-width),
+    'list-row-height': ratioize($desktop-large-width, $desktop-large-list-row-height),
+    'list-row-gap': ratioize($desktop-large-width, $desktop-large-list-row-gap)
+  ));
+}
+
+ul {
+  @include box-size(var(--list-margin) 0);
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(var(--list-columns), var(--list-column-width));
+  grid-auto-rows: var(--list-row-height);
+  row-gap: var(--list-row-gap);
+  justify-content: space-between;
+}

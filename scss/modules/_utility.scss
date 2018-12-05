@@ -1,0 +1,23 @@
+@mixin prefix ($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin set-vars ($var-map) {
+  :root {
+    @each $name, $value in $var-map {
+      #{'--' + $name}: $value;
+    }
+  }
+}
+
+@function linear-interpolate ($x1, $y1, $x2, $y2) {
+  @return calc(#{$y1} + ((100vw - #{$x1}) * #{($y2 - $y1) / ($x2 - $x1)}));
+}
+
+@function ratioize ($x, $y) {
+  $ratio: $y / $x * 100;
+  @return #{$ratio + 'vw'};
+}

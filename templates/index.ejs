@@ -1,0 +1,78 @@
+<% const data = htmlWebpackPlugin.options %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/index.css">
+  <title><%= data.title %></title>
+</head>
+<body>
+  <header id="header">
+    <hr>
+    <a href="/">
+      <img src="img/logo-name.png" alt="Icon Farm">
+    </a>
+    <hr>
+  </header>
+  <main id="content">
+    <p id="description"><%= data.description %></p>
+    <input type="search" name="icon-search" id="search" placeholder="Search Icons" value="">
+    <section id="icons">
+      <header>
+        <h1>Icons (<%= data.icons.length %>)</h1>
+      </header>
+      <ul>
+        <% for (let icon of data.icons) { %>
+          <li data-name="<%= icon.name %>" data-alt="<%= icon.alt %>"
+            data-path="<%= icon.path %>" data-filename="<%= icon.filename %>"
+            data-tooltip="<%= icon.alt ? `${icon.name} (${icon.alt})` : icon.name %>">
+            <svg class="icon" viewBox="<%= `0 0 ${data.svg.width} ${data.svg.height}` %>">
+              <path d="<%= icon.path %>" />
+            </svg>
+          </li>
+        <% } %>
+      </ul>
+    </section>
+  </main>
+  <footer id="footer">
+    <p>
+      <span>Copyright &copy; <%= data.author %> <%= (new Date()).getFullYear() %></span>
+      <span>All Rights Reserved</span>
+    </p>
+  </footer>
+  <template id="view-template">
+    <aside id="modal">
+      <button type="button" id="modal-close">
+        <svg class="icon" viewBox="0 0 64 64">
+          <path d="M14 14l36 36m-36 0l36-36" />
+        </svg>
+      </button>
+      <header>
+        <h1></h1>
+        <div id="preview"></div>
+      </header>
+      <section id="download">
+        <a id="download-png" download>
+          <svg class="icon" viewBox="0 0 64 64">
+            <path d="M12 42v8h40v-8M22 32l10 10 10-10M32 42V14" />
+          </svg>
+          <span>PNG</span>
+        </a>
+        <a id="download-svg" download>
+          <svg class="icon" viewBox="0 0 64 64">
+            <path d="M12 42v8h40v-8M22 32l10 10 10-10M32 42V14" />
+          </svg>
+          <span>SVG</span>
+        </a>
+      </section>
+      <section id="code">
+        <pre><code></code></pre>
+      </section>
+      <textarea name="clipboard" id="clipboard"></textarea>
+    </aside>
+  </template>
+</body>
+</html>

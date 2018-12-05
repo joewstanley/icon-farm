@@ -1,0 +1,30 @@
+$desktop-large-hr-width: 580px;
+$desktop-large-hr-height: 4px;
+$desktop-large-logo-width: 360px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'hr-width': ratioize($desktop-large-width, $desktop-large-hr-width),
+    'hr-height': ratioize($desktop-large-width, $desktop-large-hr-height),
+    'logo-width': ratioize($desktop-large-width, $desktop-large-logo-width)
+  ));
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  hr {
+    @include size(var(--hr-width), var(--hr-height));
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    border-radius: calc(var(--hr-height) / 2);
+    background-color: $primary-color;
+  }
+
+  img {
+    @include size(var(--logo-width), auto);
+  }
+}

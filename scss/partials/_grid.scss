@@ -1,0 +1,12 @@
+$page-padding: 0.75vw 5vw;
+
+html {
+  @include size(100%);
+}
+
+body {
+  padding: $page-padding;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}

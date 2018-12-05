@@ -1,0 +1,12 @@
+$desktop-large-paragraph-margin: 20px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'paragraph-margin': ratioize($desktop-large-width, $desktop-large-paragraph-margin)
+  ));
+}
+
+p {
+  @include box-size(var(--paragraph-margin) 0);
+  display: inline-block;
+}

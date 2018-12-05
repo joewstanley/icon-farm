@@ -1,0 +1,63 @@
+$desktop-large-tooltip-pointer-width: 6px;
+$desktop-large-tooltip-padding: 8px;
+$desktop-large-tooltip-margin: 14px;
+$desktop-large-tooltip-radius: 6px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'tooltip-pointer-width': ratioize($desktop-large-width, $desktop-large-tooltip-pointer-width),
+    'tooltip-padding': ratioize($desktop-large-width, $desktop-large-tooltip-padding),
+    'tooltip-margin': ratioize($desktop-large-width, $desktop-large-tooltip-margin),
+    'tooltip-radius': ratioize($desktop-large-width, $desktop-large-tooltip-radius)
+  ));
+}
+
+[data-tooltip] {
+  position: relative;
+
+  &::before {
+    content: '';
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -100%) rotate(180deg) rotateX(-90deg);
+    border-width: var(--tooltip-pointer-width);
+    border-style: solid;
+    border-color: $tooltip-color transparent transparent transparent;
+  }
+  
+  &::after {
+    content: attr(data-tooltip);
+    width: 100%;
+    padding: var(--tooltip-padding);
+    transform-origin: 50% calc(-1 * var(--tooltip-pointer-width));
+    transform: translate(-50%, 0%) rotateX(-90deg);
+    background-color: $tooltip-color;
+    color: #fff;
+    text-align: center;
+    border-radius: var(--tooltip-radius);
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+  }
+
+  &::before, &::after {
+    position: absolute;
+    top: calc(100% + var(--tooltip-margin));
+    left: 50%;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: transform 0.6s, opacity 0.6s;
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(-50%, -100%) rotate(180deg);
+      opacity: 1;
+    }
+    
+    &::after {
+      transform: translate(-50%, 0%);
+      opacity: 1;
+    }
+  }
+}

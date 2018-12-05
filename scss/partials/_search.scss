@@ -1,0 +1,32 @@
+$desktop-large-search-width: 720px;
+$desktop-large-search-height: 48px;
+$desktop-large-search-margin: 20px;
+$desktop-large-search-border: 4px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'search-width': ratioize($desktop-large-width, $desktop-large-search-width),
+    'search-height': ratioize($desktop-large-width, $desktop-large-search-height),
+    'search-margin': ratioize($desktop-large-width, $desktop-large-search-margin),
+    'search-border': ratioize($desktop-large-width, $desktop-large-search-border)
+  ));
+}
+
+#search {
+  @include size(var(--search-width), var(--search-height));
+  @include box-size(var(--search-margin) 0, 0 calc(var(--search-height) / 2) 0 calc(5 * var(--search-height) / 4));
+  border: var(--search-border) solid $primary-color;
+  border-radius: calc(var(--search-height) / 2);
+  background-image: url('/img/png/search.png');
+  background-position: calc(var(--search-height) / 4) 50%;
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}

@@ -1,0 +1,60 @@
+{
+  "name": "icon-farm",
+  "version": "0.1.0",
+  "description": "SVG icon library created by Joe Stanley",
+  "main": "index.js",
+  "scripts": {
+    "serve": "browser-sync start --server 'docs' --files 'docs'",
+    "build": "NODE_ENV=production webpack && npm run trim-html",
+    "trim-html": "awk NF ./docs/index.html >| temp.html && mv temp.html ./docs/index.html"
+  },
+  "keywords": [
+    "svg",
+    "icon",
+    "svgo"
+  ],
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "author": {
+    "name": "Joe Stanley",
+    "url": "https://joestanley.tech/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstanley2/icon-farm"
+  },
+  "homepage": "https://github.com/jstanley2/icon-farm#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "canvas": "^2.1.0",
+    "commander": "^2.19.0",
+    "ejs": "^2.6.1",
+    "highlight.js": "^9.13.1",
+    "svgo": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
+    "browser-sync": "^2.26.3",
+    "css-loader": "^1.0.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.7",
+    "ejs-loader": "^0.3.1",
+    "extract-loader": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.10.0",
+    "postcss-cli": "^6.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

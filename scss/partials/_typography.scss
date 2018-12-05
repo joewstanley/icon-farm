@@ -1,0 +1,59 @@
+$regular: 400;
+$medium: 500;
+
+$base-font-family: Rubik, Arial, Helvetica, sans-serif;
+$base-font-weight: $regular;
+
+$fixed-font-family: Inconsolata, monospace;
+$fixed-font-weight: $regular;
+
+$header-font-family: $base-font-family;
+$header-font-weight: $medium;
+
+$desktop-large-font-sm: 14px;
+$desktop-large-font-md: 18px;
+$desktop-large-font-lg: 24px;
+
+@include for-desktop-large-up {
+  @include set-vars((
+    'font-small': ratioize($desktop-large-width, $desktop-large-font-sm),
+    'font-medium': ratioize($desktop-large-width, $desktop-large-font-md),
+    'font-large': ratioize($desktop-large-width, $desktop-large-font-lg)
+  ));
+}
+
+body, input, textarea, button, a {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: var(--font-medium);
+  color: $primary-color;
+}
+
+pre, code {
+  font-family: $fixed-font-family;
+  font-weight: $fixed-font-weight;
+  font-size: var(--font-small);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  color: $primary-color;
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: var(--font-large);
+}
+
+h3, h4 {
+  font-size: var(--font-medium);
+}
+
+h5, h6 {
+  font-size: var(--font-large);
+}
+
+#search {
+  font-size: var(--font-large);
+}
