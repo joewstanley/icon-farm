@@ -17,7 +17,7 @@ $desktop-large-search-border: 4px;
   @include box-size(var(--search-margin) 0, 0 calc(var(--search-height) / 2) 0 calc(5 * var(--search-height) / 4));
   border: var(--search-border) solid $primary-color;
   border-radius: calc(var(--search-height) / 2);
-  background-image: url('/img/png/search.png');
+  background-image: url('./img/png/search.png');
   background-position: calc(var(--search-height) / 4) 50%;
   background-size: auto 90%;
   background-repeat: no-repeat;
